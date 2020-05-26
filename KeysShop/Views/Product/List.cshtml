@@ -1,0 +1,12 @@
+﻿<h1>Все продукты</h1>
+<h3>@Model.CurrentCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+
+        foreach (Product product in Model.Products)
+        {
+            //await Html.PartialAsync("Products", product).ConfigureAwait(true);
+            @Html.Partial("Products", product);
+        }
+    }
+</div>

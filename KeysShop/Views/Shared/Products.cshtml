@@ -1,0 +1,8 @@
+﻿@model Product
+
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.Image" alt="@Model.Name" />
+    <h2>Продукт: @Model.Name</h2>
+    <p>Цена: @Model.Price ₽</p>
+    <p><a class="btn btn-warning" asp-controller="ShopBasket" asp-action="AddToCart" asp-route-id="@Model.ProductId">Добавить в корзину</a></p>
+</div>
